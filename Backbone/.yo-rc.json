@@ -1,0 +1,12 @@
+{
+  "generator-backbone": {
+    "appPath": "app",
+    "appName": "Backbone",
+    "testFramework": "mocha",
+    "templateFramework": "lodash",
+    "coffee": false,
+    "sassBootstrap": true,
+    "includeRequireJS": true
+  },
+  "generator-mocha": {}
+}

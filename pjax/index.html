@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>PJax Demo</title>
 </head>
-<body>
+<body style="height: 2000px;">
   <div class="href">
     <a href="page1.html">Page 1</a>
     <!-- <a href="page1.html">Page 1</a> -->
@@ -16,7 +16,9 @@
 <script src="bower_components/jquery-pjax/jquery.pjax.js"></script>
 <script>
   $(document)
-    .pjax('a', '#container')
+    .pjax('a', '#container', {
+      scrollTo: 1000
+    })
     .on('pjax:send', function() {
       console.log('pjax:send trigger!');
     })

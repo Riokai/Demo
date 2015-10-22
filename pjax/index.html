@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PJax Demo</title>
+</head>
+<body>
+  <div class="href">
+    <a href="page1.html">Page 1</a>
+    <!-- <a href="page1.html">Page 1</a> -->
+  </div>
+  <div id="container">
+  </div>
+</body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery-pjax/jquery.pjax.js"></script>
+<script>
+  $(document)
+    .pjax('a', '#container')
+    .on('pjax:send', function() {
+      console.log('pjax:send trigger!');
+    })
+    .on('pjax:complete', function() {
+      console.log('pjax:complete trigger!');
+    });
+</script>
+</html>

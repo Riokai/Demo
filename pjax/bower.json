@@ -1,0 +1,25 @@
+{
+  "name": "pjax",
+  "homepage": "https://github.com/Riokai/Demo",
+  "authors": [
+    "Kai <zengkai2009@foxmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "jquery-pjax": "~1.9.6"
+  }
+}

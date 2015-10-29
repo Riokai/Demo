@@ -7,23 +7,35 @@
 <body style="height: 2000px;">
   <div class="href">
     <a href="page1.html">Page 1</a>
-    <!-- <a href="page1.html">Page 1</a> -->
+    <a href="page2.html">Page 2</a>
   </div>
   <div id="container">
   </div>
+
+  <form action="" method="GET" class="form-search" data-pjax action="one.php">
+    <input id="id_search" name="search" type="text">
+    <button type="submit" class="btn">Search</button>
+  </form>
 </body>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/jquery-pjax/jquery.pjax.js"></script>
 <script>
   $(document)
     .pjax('a', '#container', {
-      scrollTo: 1000
+      scrollTo: 0,
+      maxCacheLength: 0
+      // replace: true
     })
     .on('pjax:send', function() {
       console.log('pjax:send trigger!');
     })
     .on('pjax:complete', function() {
       console.log('pjax:complete trigger!');
+    });
+
+    $(document).on('pjax:timeout', function(event) {
+      // Prevent default timeout redirection behavior
+      event.preventDefault()
     });
 </script>
 </html>
